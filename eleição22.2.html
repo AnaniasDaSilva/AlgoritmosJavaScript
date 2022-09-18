@@ -1,0 +1,86 @@
+<script>
+    alert('Bem vindo a eleição 2022.2');
+   
+   var votsCandidato1 = 0;
+   var votosCandidato2 = 0;
+   var votosCandidato3 = 0;
+   var votosBrancos = 0;
+   var votoaNulos = 0;
+   var eleitor;
+   var voto;
+   
+   eleitor = prompt('Existe Eleitor? Digite 1 para sim e  2 para não ');
+
+   while (eleitor == '1'){
+       alert (`Siga as instruções e digite seu voto
+       Digite 1 para votar no candidato nº1
+       Digite 2 para votar no candidato nº2
+       Digite 3 para votar no candidato nº3
+       Digite 0 para votar em branco
+       Digite -1 para que seu voto seja nulo
+       `);
+       
+       voto = prompt('Digite seu voto');
+
+       switch (voto){
+            case '1':
+                votosCandidato1 = votosCandidato1 + 1;
+                break;
+            case '2':
+                votosCanadidato2 = votosCandidato2 + 1;
+                break;
+            case '3':
+                votosCandidato3 = votosCandidato3 + 1;
+                 break;
+            case '4':
+                votosBrancos = votosBrancos + 1;
+                break;
+            case '5':
+                votosNulos = votosNulos + 1;
+                break;
+
+            default:
+                alert('Não há candidato que correspa a este valor, voto inválido ');
+                break;
+
+            }
+        
+            alert ('Seu voto foi regitrado obrigado :)');
+            eleitor = prompt('Exite eleitor? digite 1 para sim e 2 para não');
+
+          }
+
+          alert(`
+          total de votos : ${votosCandidato1+votosCandidato2+votosCandidato3+votosBrancos+votosNulos}
+          Candidato1 : ${votosCandidato1}
+          Candidato2 : ${votosCandidato2}
+          Candidato3 : ${vototosCandidato3}
+          VotosBrancos : ${votosBrancos}
+          VotosNulos : ${votosnulos}
+          `)
+
+          if(votosCandidato1 == 0 && votosCandidato2 == 0 && votosCandidato3 == 0){
+            alert('Não houve vencedor!');
+          }else if(votosCandidato1 > votosCandidato2 && votosCandidato1 > votosCandidato3){
+            alert('O vencedor foi o candidato1');
+          }else if(votosCandidato2 > votosCandidato1 && votosCandidato2 > votosCandidato3){
+            alert('vencedor foi o  candidato2');
+          }else if(votosCandidato3 > votoscandidato1 && votosCandidato3 > votosCandidato2){
+            alert('O vencedor foi o candidato3');
+          }else if(votosCandidato1 == votosCandidato2 && votoscandidato3 < votosCandidato1){
+            alert('Houve empate entre os candidatos 1 e 2, devendo assim exisir um segundo turno'); 
+          }else if(votosCandidato1 == votoscandidato3 && votoscandidato2 < votosCandidato1){
+            alert('Houve empate entre os candidatos 2 e 3, devendo assim existir um segundo turno');
+          }else if(votosCandidato3 == votosCandidato2 && votosCandidato1 < votoscandidato3){
+            alert('Houve empate entre os candidatos 3 e 2 , devendo assim existir um segundo turno');
+          }
+            
+             
+            
+        
+             
+              
+            
+          
+       
+</script>
